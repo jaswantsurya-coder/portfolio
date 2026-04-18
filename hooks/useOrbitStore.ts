@@ -9,7 +9,7 @@ interface OrbitState {
   setActiveSkillIndex: (index: number) => void;
 }
 
-export const useOrbitStore = create<<OrbitOrbitState>((set) => ({
+export const useOrbitStore = create<OrbitState>((set) => ({
   orbitPosition: [0, 0, 0],
   rotation: 0,
   activeSkillIndex: 0,

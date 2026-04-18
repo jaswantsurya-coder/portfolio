@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from 'react';
+import React, { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Text, Float, MeshDistortMaterial } from '@react-three/drei';
 import * as THREE from 'three';
@@ -78,13 +78,4 @@ export default function SkillCard3D({ index }: { index: number }) {
       </mesh>
     </Float>
   );
-}
-
-// Helper for memoization since useMemo was missing in previous version
-function useMemo(fn: () => any, deps: any[]) {
-  const ref = useRef();
-  if (deps.length === 0 || JSON.stringify(deps) !== JSON.stringify(ref.current?.deps)) {
-    ref.current = { value: fn(), deps };
-  }
-  return ref.current.value;
 }
