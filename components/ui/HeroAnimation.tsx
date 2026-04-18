@@ -27,26 +27,26 @@ export default function HeroAnimation() {
   }, [mouseX, mouseY]);
 
   return (
-    <<divdiv className="absolute inset-0 z-0 pointer-events-none flex items-center justify-center overflow-hidden">
-      <<motionmotion.div
+    <div className="absolute inset-0 z-0 pointer-events-none flex items-center justify-center overflow-hidden">
+      <motion.div
         style={{ rotateX, rotateY, x: dx, y: dy }}
         className="relative w-64 h-64 md:w-96 md:h-96"
       >
         {/* Main Glowing Sphere */}
-        <<divdiv className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-500 rounded-full blur-3xl opacity-30 animate-pulse" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-500 rounded-full blur-3xl opacity-30 animate-pulse" />
 
         {/* Interactive Glass Card Effect */}
-        <<motionmotion.div
+        <motion.div
           whileHover={{ scale: 1.05 }}
           className="absolute inset-0 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl flex items-center justify-center"
         >
-          <<divdiv className="w-32 h-32 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full blur-2xl opacity-50 animate-bounce" style={{ animationDuration: '3s' }} />
+          <div className="w-32 h-32 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full blur-2xl opacity-50 animate-bounce" style={{ animationDuration: '3s' }} />
         </motion.div>
       </motion.div>
 
       {/* Background Ambient Shapes */}
-      <<divdiv className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl" />
-      <<divdiv className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl" />
     </div>
   );
 }
