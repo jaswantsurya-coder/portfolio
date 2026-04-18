@@ -15,12 +15,16 @@ export default function ScrollModel() {
     meshRef.current.rotation.y += 0.005;
   });
 
+  // Determine offset based on viewport width (simplistic approach for 3D)
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
   return (
     <Float speed={2} rotationIntensity={1.5} floatIntensity={2}>
-      <mesh ref={meshRef}>
-        <torusKnotGeometry args={[1, 0.3, 128, 16]} />
+      {/* Offset mesh to the right so it balances the left-aligned text */}
+      <mesh ref={meshRef} position={isMobile ? [0, -1, 0] : [2, 0, -1]}>
+        <torusKnotGeometry args={[1.2, 0.35, 128, 32]} />
         <MeshDistortMaterial
-          color="#ffffff"
+          color="#0D9488"
           speed={2}
           distort={0.4}
           radius={1}

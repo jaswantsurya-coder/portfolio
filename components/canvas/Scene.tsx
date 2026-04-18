@@ -20,8 +20,8 @@ export default function Scene({ children }: { children: React.ReactNode }) {
       <PerspectiveCamera makeDefault position={[0, 0, 5]} />
 
       <ambientLight intensity={0.5} />
-      <pointLight position={[10, 10, 10]} intensity={1} color="#60a5fa" />
-      <spotLight position={[-10, 10, 10]} angle={0.15} penumbra={1} intensity={0.5} color="#2563eb" />
+      <pointLight position={[10, 10, 10]} intensity={1} color="#0D9488" />
+      <spotLight position={[-10, 10, 10]} angle={0.15} penumbra={1} intensity={0.5} color="#F97316" />
 
       <Suspense fallback={null}>
         {children}

@@ -1,12 +1,12 @@
 export const SKILLS = [
   {
     category: "Frontend",
-    items: ["React", "Next.js", "Tailwind CSS", "Three.js", "GSAP", "Framer Motion"],
+    items: ["React", "Next.js", "Tailwind CSS", "Three.js", "GSAP", "Framer Motion", "TypeScript", "CSS"],
     description: "Crafting immersive, high-performance user interfaces with a focus on 3D and motion."
   },
   {
     category: "Backend",
-    items: ["Python", "FastAPI", "Django", "PostgreSQL", "Redis"],
+    items: ["Python", "FastAPI", "Django", "PostgreSQL", "Redis", "Node.js"],
     description: "Building scalable, robust server-side architectures and efficient API designs."
   },
   {
@@ -16,7 +16,7 @@ export const SKILLS = [
   },
   {
     category: "Integrations",
-    items: ["REST APIs", "Webhooks", "OAuth", "Third-party SDKs"],
+    items: ["REST APIs", "Webhooks", "OAuth", "Third-party SDKs", "Git", "Figma"],
     description: "Seamlessly connecting disparate systems to create unified digital workflows."
   }
 ];
@@ -27,20 +27,20 @@ export const PROJECTS = [
     category: "E-Commerce Experience",
     tags: ["Frontend", "Integrations"],
     link: "https://github.com/jaswantsurya-coder/AURA-Fashion-store",
-    description: "A high-end fashion experience focusing on fluid transitions and intuitive UI."
+    description: "A high-end fashion experience focusing on fluid transitions and intuitive UI. Built with a focus on visual storytelling and performance."
   },
   {
     title: "Quantum Nexus",
     category: "Web3 Experience",
     tags: ["Frontend", "Integrations"],
     link: "https://github.com/jaswantsurya-coder",
-    description: "Exploring decentralized identity and blockchain interaction."
+    description: "Exploring decentralized identity and blockchain interaction with a focus on secure and seamless user onboarding."
   },
   {
     title: "Neon Prism",
     category: "Interactive Art",
     tags: ["Three.js", "GSAP"],
     link: "https://github.com/jaswantsurya-coder",
-    description: "A visual exploration of light and geometry in a virtual space."
+    description: "A visual exploration of light and geometry in a virtual space, pushing the boundaries of real-time browser rendering."
   },
 ];
