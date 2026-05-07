@@ -1,64 +1,114 @@
 @import "tailwindcss";
 
+/* ─── Design Tokens ─────────────────────────────────────────── */
 :root {
-  /* Design System - Light Mode */
-  --background: #FAFAF9;
-  --foreground: #1C1917;
-  --primary: #0D9488;
-  --primary-dark: #0F766E;
-  --secondary: #F97316;
-  --accent: #F59E0B;
-  --text-main: #1C1917;
-  --text-muted: #78716C;
-  --surface: #FFFFFF;
-  --border: #E7E5E4;
-
-  /* Typography */
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --background:   #0c0c0c;
+  --foreground:   #ede9e2;
+  --primary:      #2DD4BF;
+  --primary-dark: #0D9488;
+  --secondary:    #F97316;
+  --accent:       #F59E0B;
+  --text-muted:   #8a8a8a;
+  --surface:      #161616;
+  --surface-2:    #1f1f1f;
+  --border:       #2a2a2a;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Design System - Dark Mode */
-    --background: #171717;
-    --foreground: #F5F5F4;
-    --primary: #2DD4BF;
-    --primary-dark: #0D9488;
-    --secondary: #F97316;
-    --accent: #F59E0B;
-    --text-main: #F5F5F4;
-    --text-muted: #A8A29E;
-    --surface: #262626;
-    --border: #404040;
-  }
-}
-
+/* ─── Tailwind v4 Theme ─────────────────────────────────────── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
+  --color-background:   var(--background);
+  --color-foreground:   var(--foreground);
+  --color-primary:      var(--primary);
   --color-primary-dark: var(--primary-dark);
-  --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
-  --color-text-main: var(--text-main);
-  --color-text-muted: var(--text-muted);
-  --color-surface: var(--surface);
-  --color-border: var(--border);
+  --color-secondary:    var(--secondary);
+  --color-accent:       var(--accent);
+  --color-text-muted:   var(--text-muted);
+  --color-surface:      var(--surface);
+  --color-surface-2:    var(--surface-2);
+  --color-border:       var(--border);
 
-  --font-sans: var(--font-body);
+  --font-sans:    var(--font-body);
   --font-heading: var(--font-heading);
-  --font-mono: var(--font-mono);
+  --font-mono:    var(--font-mono);
+}
+
+/* ─── Base ───────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;                /* base = 16px; 26px targets done per-element */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-body);
+  background-color: var(--background);
+  color:            var(--foreground);
+  font-family:      var(--font-body), system-ui, sans-serif;
+  font-size:        1rem;
+  line-height:      1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  line-height: 1.2;
+/* ── Fluid heading scale ────────────────────────────────────── */
+h1 {
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-size: clamp(3rem, 9vw, 9rem);
+  line-height: 1.0;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--foreground);
+}
+
+h2 {
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--foreground);
+}
+
+h3 {
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-size: clamp(1.25rem, 2vw, 1.625rem);   /* ≈ 26px at default viewport */
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ─── Noise grain overlay ───────────────────────────────────── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 180px;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--background); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
+
+/* ─── Selection ─────────────────────────────────────────────── */
+::selection {
+  background: var(--primary);
+  color: var(--background);
+}
+
+/* ─── Focus ring ────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 4px;
 }

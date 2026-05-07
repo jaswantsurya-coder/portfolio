@@ -2,45 +2,68 @@ export const SKILLS = [
   {
     category: "Frontend",
     items: ["React", "Next.js", "Tailwind CSS", "Three.js", "GSAP", "Framer Motion", "TypeScript", "CSS"],
-    description: "Crafting immersive, high-performance user interfaces with a focus on 3D and motion."
+    description: "Crafting immersive, high-performance user interfaces with a focus on 3D and motion.",
   },
   {
     category: "Backend",
     items: ["Python", "FastAPI", "Django", "PostgreSQL", "Redis", "Node.js"],
-    description: "Building scalable, robust server-side architectures and efficient API designs."
+    description: "Building scalable, robust server-side architectures and efficient API designs.",
   },
   {
     category: "Systems & Low Level",
     items: ["C", "C++", "Memory Management", "Multi-threading"],
-    description: "Deep diving into system performance and hardware-level optimization."
+    description: "Deep diving into system performance and hardware-level optimization.",
   },
   {
     category: "Integrations",
     items: ["REST APIs", "Webhooks", "OAuth", "Third-party SDKs", "Git", "Figma"],
-    description: "Seamlessly connecting disparate systems to create unified digital workflows."
-  }
+    description: "Seamlessly connecting disparate systems to create unified digital workflows.",
+  },
 ];
 
 export const PROJECTS = [
   {
-    title: "AURA Fashion Store",
-    category: "E-Commerce Experience",
-    tags: ["Frontend", "Integrations"],
-    link: "https://github.com/jaswantsurya-coder/AURA-Fashion-store",
-    description: "A high-end fashion experience focusing on fluid transitions and intuitive UI. Built with a focus on visual storytelling and performance."
+    id: "resume-builder",
+    title: "Resume Builder",
+    category: "Productivity Tool",
+    tags: ["React", "TypeScript", "Frontend"],
+    link: "https://resume-builder-three-tawny-19.vercel.app/",
+    imgSrc:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=85",
+    description:
+      "A sleek, browser-based resume builder — real-time preview, clean UI, and instant PDF export with zero backend.",
   },
   {
+    id: "aura-fashion",
+    title: "AURA Fashion",
+    category: "E-Commerce Experience",
+    tags: ["Three.js", "GSAP", "React"],
+    link: "https://github.com/jaswantsurya-coder/AURA-Fashion-store",
+    imgSrc:
+      "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1200&auto=format&fit=crop&q=85",
+    description:
+      "High-end fashion storefront with editorial layouts, fluid page transitions, and 3D product showcases.",
+  },
+  {
+    id: "quantum-nexus",
     title: "Quantum Nexus",
     category: "Web3 Experience",
-    tags: ["Frontend", "Integrations"],
+    tags: ["Web3", "TypeScript", "Frontend"],
     link: "https://github.com/jaswantsurya-coder",
-    description: "Exploring decentralized identity and blockchain interaction with a focus on secure and seamless user onboarding."
+    imgSrc:
+      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1200&auto=format&fit=crop&q=85",
+    description:
+      "Decentralized identity & blockchain interaction with secure, seamless onboarding and a futuristic interface.",
   },
   {
+    id: "neon-prism",
     title: "Neon Prism",
     category: "Interactive Art",
-    tags: ["Three.js", "GSAP"],
+    tags: ["Three.js", "WebGL", "GSAP"],
     link: "https://github.com/jaswantsurya-coder",
-    description: "A visual exploration of light and geometry in a virtual space, pushing the boundaries of real-time browser rendering."
+    imgSrc:
+      "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=1200&auto=format&fit=crop&q=85",
+    description:
+      "Generative real-time art in the browser — light, geometry, and shader-driven animations at the edge of WebGL.",
   },
 ];
