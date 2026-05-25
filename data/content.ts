@@ -23,6 +23,16 @@ export const SKILLS = [
 
 export const PROJECTS = [
   {
+    id: "village-grievance",
+    title: "Village Grievance",
+    category: "Community & Gov Tech",
+    tags: ["React", "PostgreSQL", "PWA"],
+    link: "https://villagegrievencesystem-m7ju.vercel.app/",
+    imgSrc: "/village_grievance.png",
+    description:
+      "A secure and transparent Gram Panchayat Grievance System — featuring offline draft support, status tracking, and multi-lingual access.",
+  },
+  {
     id: "resume-builder",
     title: "Resume Builder",
     category: "Productivity Tool",

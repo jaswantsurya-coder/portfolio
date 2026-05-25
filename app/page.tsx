@@ -14,10 +14,12 @@ import {
   ShoppingBag,
   Globe,
   Layers,
+  Landmark,
 } from "lucide-react";
 
 // Map project ids to lucide icons
 const PROJECT_ICONS: Record<string, React.ReactNode> = {
+  "village-grievance": <Landmark size={22} />,
   "resume-builder": <FileText size={22} />,
   "aura-fashion":   <ShoppingBag size={22} />,
   "quantum-nexus":  <Globe size={22} />,
