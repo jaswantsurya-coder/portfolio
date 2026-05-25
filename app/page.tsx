@@ -9,6 +9,7 @@ import { ServicesSlider } from "@/components/blocks/animated-slideshow";
 import { motion } from "framer-motion";
 import { PROJECTS, SKILLS } from "@/data/content";
 import { HeroSection } from "@/components/blocks/hero-section-5";
+import ParticlesBackground from "@/components/ui/ParticlesBackground";
 import {
   FileText,
   ShoppingBag,
@@ -59,16 +60,9 @@ export default function Page() {
   return (
     <>
       <SmoothScroll>
-        {/* ── GLOBAL VIDEO BACKGROUND ────────────────────────── */}
-        <div className="fixed inset-0 z-[-1] bg-background">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="size-full object-cover opacity-40"
-            src="https://ik.imagekit.io/lrigu76hy/tailark/dna-video.mp4?updatedAt=1745736251477"
-          />
+        {/* ── GLOBAL PARTICLES BACKGROUND ─────────────────────── */}
+        <div className="fixed inset-0 z-[-1] bg-background overflow-hidden">
+          <ParticlesBackground />
           {/* Gradients to ensure text remains readable */}
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/90" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-background/40 to-background" />
