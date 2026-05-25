@@ -3,6 +3,7 @@
 import React, { useRef, useLayoutEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { InteractiveRobotSpline } from '@/components/ui/interactive-3d-robot';
 
 const SOCIAL_LINKS = [
   { label: 'GitHub',   href: 'https://github.com/jaswantsurya-coder' },
@@ -136,26 +137,26 @@ export function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right Side: Floating Locally Hosted 3D Robot Loop Video */}
+          {/* Right Side: Floating Interactive 3D Robot Spline */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.1, ease: 'easeOut', delay: 0.5 }}
-            className="relative lg:absolute lg:right-4 xl:right-16 lg:top-[50%] lg:-translate-y-1/2 w-full max-w-[320px] sm:max-w-[350px] lg:max-w-[440px] aspect-square mx-auto lg:mx-0 mt-10 lg:mt-0 pointer-events-auto mix-blend-screen z-10"
+            className="relative lg:absolute lg:right-4 xl:right-16 lg:top-[50%] lg:-translate-y-1/2 w-full max-w-[320px] sm:max-w-[350px] lg:max-w-[440px] aspect-square mx-auto lg:mx-0 mt-10 lg:mt-0 pointer-events-auto mix-blend-screen spline-wrapper z-10"
           >
-            <video
-              src="/make_him_only_waving_single_ha.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-contain brightness-110"
-              onTimeUpdate={(e) => {
-                if (e.currentTarget.currentTime >= 4) {
-                  e.currentTarget.currentTime = 0;
-                  e.currentTarget.play();
-                }
-              }}
+            {/* Custom inline stylesheet to hide the Spline watermark / branding badge */}
+            <style dangerouslySetInnerHTML={{ __html: `
+              .spline-wrapper a, 
+              .spline-wrapper [class*="logo"], 
+              .spline-wrapper [style*="z-index"] {
+                display: none !important;
+                opacity: 0 !important;
+                pointer-events: none !important;
+              }
+            `}} />
+            <InteractiveRobotSpline
+              scene="https://prod.spline.design/PyzDhpQ9E5f1E3MT/scene.splinecode"
+              className="w-full h-full object-contain"
             />
           </motion.div>
         </motion.div>

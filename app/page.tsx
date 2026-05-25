@@ -60,19 +60,26 @@ export default function Page() {
   return (
     <>
       <SmoothScroll>
-        {/* ── GLOBAL VIDEO BACKGROUND (LOCALLY HOSTED) ────────── */}
-        <div className="fixed inset-0 z-[-1] bg-background overflow-hidden">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="size-full object-cover opacity-40"
-            src="/dna-video.mp4"
+        {/* ── GLOBAL PREMIUM DESIGN BACKGROUND (UI/UX PRO MAX) ── */}
+        <div className="fixed inset-0 z-[-1] bg-black overflow-hidden">
+          {/* Subtle animated glowing ambient orbs */}
+          <div className="absolute top-[-10%] left-[-10%] w-[50rem] h-[50rem] bg-[radial-gradient(circle,rgba(2,132,199,0.12)_0%,transparent_70%)] rounded-full blur-[80px]" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[50rem] h-[50rem] bg-[radial-gradient(circle,rgba(139,92,246,0.08)_0%,transparent_70%)] rounded-full blur-[80px]" />
+          
+          {/* Interactive Particle Network */}
+          <ParticlesBackground />
+
+          {/* Cybernetic Grid Overlay */}
+          <div 
+            className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:4rem_4rem]"
+            style={{
+              maskImage: 'radial-gradient(circle at 50% 50%, black 60%, transparent 100%)',
+              WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 60%, transparent 100%)'
+            }}
           />
+
           {/* Gradients to ensure text remains readable */}
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/90" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-background/40 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/50 to-background/90" />
         </div>
 
         <Navbar />
