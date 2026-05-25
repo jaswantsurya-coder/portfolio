@@ -60,9 +60,16 @@ export default function Page() {
   return (
     <>
       <SmoothScroll>
-        {/* ── GLOBAL PARTICLES BACKGROUND ─────────────────────── */}
+        {/* ── GLOBAL VIDEO BACKGROUND (LOCALLY HOSTED) ────────── */}
         <div className="fixed inset-0 z-[-1] bg-background overflow-hidden">
-          <ParticlesBackground />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="size-full object-cover opacity-40"
+            src="/dna-video.mp4"
+          />
           {/* Gradients to ensure text remains readable */}
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/90" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-background/40 to-background" />
