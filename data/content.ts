@@ -65,26 +65,4 @@ export const PROJECTS = [
     description:
       "High-end fashion storefront with editorial layouts, fluid page transitions, and 3D product showcases.",
   },
-  {
-    id: "quantum-nexus",
-    title: "Quantum Nexus",
-    category: "Web3 Experience",
-    tags: ["Web3", "TypeScript", "Frontend"],
-    link: "https://github.com/jaswantsurya-coder",
-    imgSrc:
-      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1200&auto=format&fit=crop&q=85",
-    description:
-      "Decentralized identity & blockchain interaction with secure, seamless onboarding and a futuristic interface.",
-  },
-  {
-    id: "neon-prism",
-    title: "Neon Prism",
-    category: "Interactive Art",
-    tags: ["Three.js", "WebGL", "GSAP"],
-    link: "https://github.com/jaswantsurya-coder",
-    imgSrc:
-      "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=1200&auto=format&fit=crop&q=85",
-    description:
-      "Generative real-time art in the browser — light, geometry, and shader-driven animations at the edge of WebGL.",
-  },
 ];

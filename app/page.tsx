@@ -13,7 +13,6 @@ import ParticlesBackground from "@/components/ui/ParticlesBackground";
 import {
   FileText,
   ShoppingBag,
-  Globe,
   Layers,
   Landmark,
   Headphones,
@@ -25,8 +24,6 @@ const PROJECT_ICONS: Record<string, React.ReactNode> = {
   "village-grievance": <Landmark size={22} />,
   "resume-builder": <FileText size={22} />,
   "aura-fashion":   <ShoppingBag size={22} />,
-  "quantum-nexus":  <Globe size={22} />,
-  "neon-prism":     <Layers size={22} />,
 };
 
 // Build CardItem array consumed by ExpandingCards
