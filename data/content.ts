@@ -23,6 +23,17 @@ export const SKILLS = [
 
 export const PROJECTS = [
   {
+    id: "jbl-live-m6",
+    title: "JBL Live M6",
+    category: "Product Landing Page",
+    tags: ["React", "Next.js", "Tailwind CSS", "GSAP"],
+    link: "https://headphone-website-ten.vercel.app/",
+    imgSrc:
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=1200&auto=format&fit=crop&q=85",
+    description:
+      "An immersive, high-fidelity landing page showcasing the JBL Live M6 30mm precision driver system, complete with fluid animations, interactive showcases, and detail spec sheets.",
+  },
+  {
     id: "village-grievance",
     title: "Village Grievance",
     category: "Community & Gov Tech",
